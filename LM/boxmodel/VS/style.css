@@ -1,0 +1,67 @@
+body {
+    background-color: hsl(0, 0%, 15%);
+    margin: 0;
+}
+
+h1 {
+    color: hsl(45, 50%, 50%);
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 3em;
+}
+
+.vs {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Si queremos item en la misma linea "inline" PERO!!!! no se puede modificar el alto y ancho,
+para ello mejor "inline-block" */
+
+/* PRIMER PAIS */
+
+.pais1 {
+    display: inline-block;
+    width: 15rem;
+    height: 9rem;
+}
+
+.rojo {
+    background-color: hsl(0, 50%, 50%);
+    display: block;
+    width: 100%;
+    height: 33.33%;
+}
+
+.amarillo {
+    background-color: hsl(60, 75%, 50%);
+    display: block;
+    width: 100%;
+    height: 33.34%;
+}
+
+img {
+    display: inline;
+    width: 10rem;
+    height: 10rem;
+}
+
+/* SEGUNDO PAIS */
+
+.pais2 {
+    background-color: hsl(0, 50%, 50%);
+    width: 15rem;
+    height: 9rem;
+}
+
+.rojolateral {
+    background-color: hsl(0, 50%, 37%);
+    width: 13%;
+    height: 100%;
+}
+
+.blanco {
+    background-color: green;
+    width: 80%;
+    height: 33.33%;
+}
