@@ -1,3 +1,50 @@
-h1{
+h1 {
+    color: aliceblue;
+    background-color: #ff0066;
+    background-color: #ff006623;
+    background-color: rgb(250, 252, 78);
+    background-image: linear-gradient(tomato, rgb(250, 252, 78));
+}
+
+h1 {
+    width: 1em;
+    height: 4em;
+}
+
+panel {
+    width: 30%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #f1c40f;
+}
+
+a:hover, li:hover {/* con comas podemos serpara varios selectores para aplicarles las mismas reglas */
+    background-color: #f1c40f;
+    color: #777;
+}
+
+.rojo {
     color: tomato;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    background-color: #777;
+}
+
+.menuItem {
+    display: inline;
+    padding: 0  .5rem;
+}
+
+.pepino {
+    display: block;/* inline se usa para contenido que tendra el mismo tamaño, si quieremos diferentes tamaños, inline-block */ 
+    background-image: url(https://www.ecestaticos.com/image/clipping/1ddc16f3cdf03b3e743886146cf685a7/opening.jpg);
+    background-size: cover;
+    width: 20rem;
+    height: 20rem;
 }
