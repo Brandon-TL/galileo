@@ -1,10 +1,12 @@
 body {
-    background-color: #7dcbff;
+    background-color: #fff;
     margin: 0;
 }
 
 .up {
-    width: 100%;
+    background-color: #7dcbff;
+    /*Debido a que con width:100%; se deforma lo he dimesionado con rem al igual que .road*/
+    width: 98.95rem;
     height: 35.3rem;
 }
 
@@ -57,7 +59,7 @@ body {
 
 .road {
     background-color: #3A3A3A;
-    width: 100%;
+    width: 98.95rem;
     height: 12rem;
 }
 
