@@ -1,14 +1,46 @@
 p {
-    margin: 5px;
+    margin: 15px;
+    background-color: pink;
+    color: blueviolet;
+    border: 5em solid black;
+    border-left-style: dashed;
+    border-color: greenyellow blueviolet blue red;
+    padding: 0.25em 0.5em; 
 }
 
 .caja {
-    margin: 4rem;
-    background-color: rgb(0, 183, 255);
-    height: 20px;
-    width: 80px;
+    margin: 15px;
+    background-color: rgb(0, 153, 255);
+    height: 60px;
+    width: 90px;
+    padding: 0.01px;
+    overflow: hidden;
 }
 
+.triangulo {
+    border: 45px;
+    border-color: greenyellow blueviolet blue red;
+    width: 0;
+}
+
+.caja:hover > .subcaja {
+    margin-left: 10px;
+}
+
+
+
 .subcaja {
-    
+    background-color: pink;
+    margin-top: 10px;
+    margin-left: 90px;
+    height: 10px;
+    width: 20px;
+    transition: margin 0.5s;
+}
+
+.cojo {
+    display: inline-block;
+    background-color:purple;
+    padding: 2px 4px;
+    margin: 5px;
 }
