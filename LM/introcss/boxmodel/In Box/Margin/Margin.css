@@ -18,10 +18,9 @@ p {
 }
 
 .triangulo {
-    border: 45px;
-    border-color: greenyellow blueviolet blue red;
-    width: 0;
-}
+    border: 45px solid transparent;
+    border-left-color:red;
+}   
 
 .caja:hover > .subcaja {
     margin-left: 10px;
