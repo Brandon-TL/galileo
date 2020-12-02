@@ -1,0 +1,22 @@
+body {
+    background-color: hsl(237, 48%, 19%);
+}
+
+.circle {
+    background-color: hsl(120, 61%, 21%);
+    height: 20em;
+    width: 20em;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px 8px hsl(120, 50%, 60%) inset;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .circle_box {
+    width: 25em;
+    height: 20em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: hsl(0, 0%, 30%);
+    display: inline-block;
+}    */

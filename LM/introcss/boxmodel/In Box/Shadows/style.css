@@ -1,0 +1,38 @@
+:root {
+    --width: 10%;
+    --height: 10%;
+}
+
+body {
+    background-color: #62656b;
+}
+
+.chess {
+    background-color: hsl(0, 0%, 30%);
+    height: 20em;
+    width: 20em;
+    box-shadow: 5px 5px,
+                10px 10px inset;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.circle {
+    background-color: hsl(7, 50%, 50%);
+    height: 20em;
+    width: 20em;
+    border-radius: 50%;
+    box-shadow: -10px -10px 20px 8px hsl(7, 50%, 30%) inset,
+                20px 20px 30px 8px hsl(7, 50%, 60%) inset;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle_box {
+    width: 25em;
+    height: 20em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: hsl(0, 0%, 30%);
+    display: inline-block;
+}
