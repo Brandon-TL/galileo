@@ -2,28 +2,38 @@ body {
     background-color: hsl(237, 48%, 19%);
 }
 
-
-.circle {
-    background-color: black;
-    height: 20em;
-    width: 20em;
-}
-
 .Sun {
     background-color: hsl(44, 80%, 48%);
     height: 10em;
     width: 10em;
-
     border-radius: 50%;
     box-shadow: 1px 1px 10px 10px hsl(59, 50%, 60%) inset,
                 0px 0px 13px 13px hsl(59, 50%, 60%);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+}
+
+.orbit {
+    border: solid 1px white;
+    border-radius: 50%;
+    border-color: #fff;
+    position: absolute;
+}
+
+.orbit1 {
+    margin-left: 5em;
+    margin-top: 5em;
+    height: 30em;
+    width: 30em;
+}
+
+.orbit2 {
+    height: 40em;
+    width: 40em;
 }
 
 .P {
-    width: 30em;
-    height: 30em;
+    width: 50em;
+    height: 23em;
     display: inline-block;
 }
 
@@ -65,7 +75,7 @@ body {
     transition: 4s;
 }
 
-.P:hover>.Merc:hover {
+/*.P:hover>.Merc:hover {
     transform: translateX(1275px) rotate(90deg);
     transition: 4s;
 }
@@ -82,4 +92,4 @@ body {
 .P:hover>.EM:hover>.Moon {
     transform: translateX(200px);
     transition: 4s;
-}
+}*/
