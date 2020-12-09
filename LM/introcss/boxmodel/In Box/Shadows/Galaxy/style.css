@@ -2,21 +2,84 @@ body {
     background-color: hsl(237, 48%, 19%);
 }
 
+
 .circle {
-    background-color: img="";
+    background-color: black;
     height: 20em;
     width: 20em;
+}
+
+.Sun {
+    background-color: hsl(44, 80%, 48%);
+    height: 10em;
+    width: 10em;
+
     border-radius: 50%;
-    box-shadow: 10px 10px 20px 8px hsl(120, 50%, 60%) inset;
+    box-shadow: 1px 1px 10px 10px hsl(59, 50%, 60%) inset,
+                0px 0px 13px 13px hsl(59, 50%, 60%);
     margin-left: auto;
     margin-right: auto;
 }
 
-/* .circle_box {
-    width: 25em;
-    height: 20em;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: hsl(0, 0%, 30%);
+.P {
+    width: 30em;
+    height: 30em;
     display: inline-block;
-}    */
+}
+
+.Merc {
+    background-color: hsl(27, 83%, 34%);
+    height: 7.5em;
+    width: 7.5em;
+    border-radius: 50%;
+    box-shadow: -10px -11px 10px 1px hsl(27, 60%, 68%) inset;
+    display: inline-block;
+}
+
+.EM {
+    width: 20%;
+    height: 60%;
+}
+
+.Earth {
+    background-color: hsl(120, 61%, 21%);
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    box-shadow: -10px -11px 10px 1px hsl(120, 50%, 60%) inset;
+    margin-left: 20%;
+    display: inline-block;
+}
+
+.Moon {
+    background-color: hsl(204, 26%, 34%);
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    box-shadow: -10px -11px 10px 1px hsl(0, 2%, 78%) inset;
+    display: inline-block;
+}
+
+.P:hover {
+    transform: rotate(-120deg);
+    transition: 4s;
+}
+
+.P:hover>.Merc:hover {
+    transform: translateX(1275px) rotate(90deg);
+    transition: 4s;
+}
+
+.P:hover>.EM:hover {
+    transition: 4s;
+}
+
+.P:hover>.EM:hover>.Earth {
+    transform: rotate(90deg);
+    transition: 4s;
+}
+
+.P:hover>.EM:hover>.Moon {
+    transform: translateX(200px);
+    transition: 4s;
+}
