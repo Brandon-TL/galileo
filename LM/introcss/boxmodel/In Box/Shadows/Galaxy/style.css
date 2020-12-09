@@ -3,7 +3,7 @@ body {
 }
 
 .circle {
-    background-color: hsl(120, 61%, 21%);
+    background-color: img="";
     height: 20em;
     width: 20em;
     border-radius: 50%;
