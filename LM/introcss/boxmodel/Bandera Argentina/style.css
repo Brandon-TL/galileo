@@ -21,3 +21,9 @@ h1 {
     height: 20px;
     width: 33.33%;/* los porcentajes funcionan respecto a sus padres */
 }
+
+.tri {
+    border: 5rem solid transparent;
+    border-left-color: black;
+    margin: 3px solid red;
+}
