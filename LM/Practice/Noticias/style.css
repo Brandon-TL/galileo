@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --body-bgc: #ECF0F1;
+    --cabecera-bgc: #3599DB;
+}
+
+body {
+    background-color: var(--body-bgc);
+}
+
+/*    HEADER    */
+
+
+header {
+    height: 10em;
+    background-color: var(--cabecera-bgc);
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    overflow: hidden;
+}
+
+.h1 {
+    font-size: 1.25em;
+    display: inline-block;
+    width: 85%;
+    margin: 2.5em;
+}
+
+header > img {
+    width: 15%;
+    height: 100%;
+}
+
+/*      MAIN       */
+
+
+main {
+    height: 30em;
+}
