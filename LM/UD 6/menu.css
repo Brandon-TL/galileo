@@ -1,0 +1,87 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: #4E7072;
+}
+
+.texto-resaltado {
+    display: inline;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.hada {
+    width: 50px;
+    float: left;
+    margin-right: 1rem;
+}
+
+.texto-resaltado:hover > .tooltip {
+    opacity: 0.95;
+    display: block;
+}
+
+.tooltip {
+    position: absolute;
+    transition: opacity 0,5s;
+    display: none;
+    opacity: 0;
+    padding: 5rem;
+    width: 15rem;
+    background: #000;
+    color: var(--text-color);
+    border-radius: 10px;
+    left: 1rem;
+    top: 1.5rem;
+}
+
+.tooltip::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background-color: #0000;
+}
+
+.submenu {
+    position: absolute;
+    flex-direction: column;
+    margin-top: -15rem;
+    transition: margin-top 0.5s ease;
+    display: none;
+}
+
+.menu > .menu-item:hover > .submenu {
+    margin-top: 0;
+    display: flex;
+}
+
+.menu a {
+    padding: 0.25rem 1rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.submenu > .menu-item {
+    width: 100%;
+}
+
+.menu-item:hover > a{
+    background-color: var(--text-color);
+    color: #0000;
+}

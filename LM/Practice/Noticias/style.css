@@ -1,17 +1,17 @@
-:root {
+/* :root {
     --body-bgc: #ECF0F1;
     --cabeceraLogo-bgc: #3599DB;
     --main-bgc: #ECF0F1;
     --noticia-bgc: #F5F5F5;
-}
+} */
 
 body {
-    background-color: var(--body-bgc);
+    background-color: #ECF0F1;
 }
 
 .cebeceraLogo {
     height: 10em;
-    background-color: var(--cabeceraLogo-bgc);
+    background-color: #3599DB;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,7 @@ body {
 .fotoLogo {
     width: 150px;
     vertical-align: top;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0;   
 }
 
 h1 {
@@ -46,7 +46,7 @@ h2 {
 }
 
 main {
-    background-color: var(--main-bgc);
+    background-color: #ECF0F1;
     padding: 0.1px;
 }
 
@@ -56,15 +56,63 @@ main {
     border-radius: 5px 0 0 5px;
 }
 
+.noticiaBody {
+    padding: 0.5em 1em;
+}
+
+.fotoTerraza {
+    /*margin-left: auto;
+    margin-right: auto;
+    solo sirven en elementos en linea*/
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .noticia {
-    background-color: var(--noticia-bgc);
+    background-color: #F5F5F5;
     width: 70%;
     margin: 1em;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 6px 6px 7px 0px hsl(0, 0%, 50%);
+    box-shadow: 3px 3px 3px 0px hsl(0, 0%, 50%);
+    border-radius: 5px;
+    padding: 0.1em;
+    /*padding: 0.1em; para solucionar colapsado*/
+    /* overflow: hidden; */
 }
 
+.fotoAutor {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 2em;
+    /*Tambien sirve .noticiaFooter > img {} ya
+    que afecta solo a sus hijos directos*/
+}
 
+.cuerpoComentario {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1em;
+    margin-left: 1em;
+}
 
+.tab {
+    padding-left: 2em;
+}
 
+.comentario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    /*Aling-items sirve para */
+}
+
+.snowboard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
