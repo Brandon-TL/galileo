@@ -8,6 +8,14 @@
     --text-color: #4E7072;
 }
 
+main {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: ;
+    margin-right: ;
+    
+}
+
 .texto-resaltado {
     display: inline;
     position: relative;
@@ -47,7 +55,10 @@ a {
     content: "";
     width: 12px;
     height: 12px;
-
+    background-color: black;
+    position: absolute;
+    top: -6px;
+    left: 3.5rem;
 }
 
 .menu {
@@ -56,19 +67,25 @@ a {
     justify-content: center;
     list-style: none;
     background-color: #0000;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .submenu {
     position: absolute;
+    top: 100%;
     flex-direction: column;
     margin-top: -15rem;
     transition: margin-top 0.5s ease;
     display: none;
+    z-index: 0;
 }
 
 .menu > .menu-item:hover > .submenu {
     margin-top: 0;
     display: flex;
+    white-space: nowrap;
 }
 
 .menu a {
