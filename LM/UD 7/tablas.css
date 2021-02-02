@@ -1,0 +1,29 @@
+table {
+    border: 0.5px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    outline: 0.5px solid black;
+}
+
+th {
+    outline: 0.5px solid black;
+    background-color: gray;
+}
+
+caption {
+    caption-side: bottom;
+}
+
+.producto {
+    background-color: rgb(13, 202, 13);
+}
+
+.yellow {
+    background-color: rgb(255, 174, 0);
+}
+
+.resultado {
+    background-color: rgb(25, 159, 204);
+}

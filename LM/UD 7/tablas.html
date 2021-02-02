@@ -3,39 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ejemplo de tooltip</title>
+    <link rel="stylesheet" href="tablas.css">
+    <title>Tablas</title>
 </head>
 <body>
     <table>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        <colgroup>
+            <col class="producto"> 
+            <col span="3">
+            <col class="yellow">
+        </colgroup>
+        <caption>Histórico de ventas por trimestres en 2020</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+                <th>Q4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pepinillos</td>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Tomato</td>
+                <td colspan="2">5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Naranjo</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td class="resultado">9</td>
+                <td class="resultado">989</td>
+                <td class="resultado">13756</td>
+                <td class="resultado">579</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
@@ -47,5 +64,6 @@
     Pepinillos      123     823     12312   323
     Tomato          23      123     123     213
     Naranjo         123     43      1321    43
+    Total           269     989     13756   579
 
  -->
