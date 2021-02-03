@@ -1,0 +1,6 @@
+.encabezado {
+    background-color: tomato;
+    width: 40%;
+    position: sticky;
+    top: 0;
+}

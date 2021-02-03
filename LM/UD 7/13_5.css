@@ -22,10 +22,9 @@ td:last-child {
 
 th:first-of-type {
     background-color:  rgb(40, 40, 40);
+    color: white;
 }
 
 .bw {
-    background-color: rgb(40, 40, 40);
-    color: white;
     transform: rotate(-90deg);
 }

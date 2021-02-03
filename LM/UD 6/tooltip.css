@@ -1,17 +1,35 @@
-* {
+*, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-main {
-    margin-top: 1rem;
-    width: 80%;
+body {
+    min-width: 336px;
+    background-color: rgb(172, 172, 172);
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
+:root {
+    --text-color: #4E7072;
+}
+
+h1 {
+    background-color: black;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 35px;
+}
+
+main {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-resaltado {
+    display: inline;
+    position: relative;
 }
 
 li {
@@ -24,28 +42,24 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.submenu {
-    position: absolute;
-    top: 100%;
-    flex-direction: column;
-    margin-top: -15rem;
-    transition: margin-top 0.5s ease;
-    display: none;
-    z-index: 0;
+    position: sticky;
+    top: 10px;
 }
 
-/*
-.texto-resaltado {
-    display: inline;
-    position: relative;
-}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+} 
 
 .hada {
     width: 50px;
     float: left;
     margin-right: 1rem;
 }
+
+/* nav a ?????????? {
+    position: ;
+} */
 
 .texto-resaltado:hover > .tooltip {
     opacity: 0.95;
@@ -59,7 +73,7 @@ nav {
     opacity: 0;
     padding: 5rem;
     width: 15rem;
-    background: #000;
+    background: black;
     color: var(--text-color);
     border-radius: 10px;
     left: 1rem;
@@ -79,12 +93,11 @@ nav {
 .menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     list-style: none;
     background-color: #0000;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
 }
 
 .submenu {
@@ -114,6 +127,6 @@ nav {
 }
 
 .menu-item:hover > a{
-    background-color: var(--text-color);
-    color: #0000;
-} */
+    background-color: black;
+    color: var(--text-color);
+}
