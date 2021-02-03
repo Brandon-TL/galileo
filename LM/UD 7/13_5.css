@@ -1,0 +1,31 @@
+table {
+    border: 2px solid darkcyan;
+    border-collapse: collapse;
+    background:lightgray;
+}
+
+td, th{
+    outline: 2px solid darkcyan;
+    padding: 1em;
+    list-style: none;
+}
+
+th {
+    background-color: gray;
+}
+
+td:last-child {
+    color: white;
+    background-color: rgb(170, 170, 170);
+    text-align: center;
+}
+
+th:first-of-type {
+    background-color:  rgb(40, 40, 40);
+}
+
+.bw {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    transform: rotate(-90deg);
+}
