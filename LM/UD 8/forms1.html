@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 0.5rem;
+        }
+
+        label {
+            display: inline-block;
+            width: 10ch;
+            text-align: center;
+        }
+
+        input {
+            background-color: lightgray;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-left: 15ch;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="processform.php" method="GET">
+        <fieldset>
+            <legend>
+                
+            </legend>
+        </fieldset>
+        <div>
+            <label for="usuario">Usuario</label>
+            <input id="usuario" type="text" name="usuario">
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" name="rol" id="password">
+        </div>
+
+        <button>Entrar</button>
+    </form>
+</body>
+</html>
