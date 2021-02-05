@@ -7,6 +7,7 @@
     <style>
         div {
             margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
         }
 
         label {
@@ -29,20 +30,52 @@
 <body>
     <form action="processform.php" method="GET">
         <fieldset>
-            <legend>
-                
-            </legend>
+            <legend>Datos de inicio</legend>
+            <div>
+                <label for="usuario">Usuario</label>
+                <input id="usuario" type="text" name="usuario_name">
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input type="password" name="pass_name" id="pass">
+            </div>
+            <div>
+                <label>
+                    Email <input id="email" type="email" name="email">
+                </label>
+            </div>
+            <div>
+                <label for="color">
+                    <span></span>
+                </label>
+            </div>
         </fieldset>
-        <div>
-            <label for="usuario">Usuario</label>
-            <input id="usuario" type="text" name="usuario">
-        </div>
-        <div>
-            <label for="password">Contraseña</label>
-            <input type="password" name="rol" id="password">
-        </div>
-
-        <button>Entrar</button>
+        <fieldset>
+            <div>
+                Fecha de nacimiento <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                Hora de nacimiento<input type="time" name="horaNacimiento" id="horaNacimiento">
+            </div>
+            <div>
+                <input type="checkbox" name="res" id="res">Residente en Valladolid
+                <input type="checkbox" name="res" id="res">Nacionalidad española</div>
+        </fieldset>
+        <fieldset>
+            <legend>Indentidad sexual</legend>
+            <input type="radio" name="gen" id="gen-hombre"><label for="gen-hombre">Hombre</label>
+            <input type="radio" name="gen" id="gen-mujer"><label for="gen-mujer">Mujer</label>
+            <input type="radio" name="gen" id="gen-na"><label for="gen-na">Prefiero no decirlo</label>
+        </fieldset>
+        <fieldset>
+            <legend>Estado civil</legend>
+            <input type="radio" name="es" id="es-sol"><label for="es-sol">Soltera/o</label>
+            <input type="radio" name="es" id="es-cas"><label for="es-cas">Casada/o</label>
+            <input type="radio" name="es" id="es-vi"><label for="es-vi">Viuda/o</label>
+            <input type="radio" name="es" id="es-na"><label for="es-na">Prefiero no decirlo</label>
+            <div>
+                Número de hijos <input type="number" name="numHijos" id="numHijos">
+            </div>
+        </fieldset>
+        <input type="sumbit" value="Entrar">
     </form>
 </body>
 </html>
