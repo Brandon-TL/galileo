@@ -42,8 +42,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    top: 10px;
 }
 
 a {
@@ -51,7 +49,7 @@ a {
     color: var(--text-color);
 } 
 
-.hada {
+.emoji {
     width: 50px;
     float: left;
     margin-right: 1rem;
@@ -76,7 +74,7 @@ a {
     background: black;
     color: var(--text-color);
     border-radius: 10px;
-    left: 1rem;
+    left: 0.5rem;
     top: 1.5rem;
 }
 
@@ -108,6 +106,7 @@ a {
     transition: margin-top 0.5s ease;
     display: none;
     z-index: 0;
+    background-color: black;
 }
 
 .menu > .menu-item:hover > .submenu {
@@ -127,6 +126,6 @@ a {
 }
 
 .menu-item:hover > a{
-    background-color: black;
+    background-color: rgb(71, 71, 71);
     color: var(--text-color);
 }
