@@ -1,0 +1,33 @@
+1.  Nombre de los clientes de Burgos
+2.  Descripción de los productos cuyo código coincida con su descripción.
+3.  Nombre y teléfono de los clientes que han comprado algo.
+4.  Nombre y teléfono de los clientes que no han comprado nada.
+5.  Nombre del cliente, código de producto y cantidad de todos los productos para los que se han vendido más de 100 unidades en una sola venta.
+6.  Código de los productos que tienen un precio superior al del producto con descripción ‘Borrador’.
+7.  Productos que no se han comprado nunca en León.
+
+Clientes(cod, nombre, dirección, tel, pob)
+Productos(cod, desc, precio)
+Ventas(prod, cliente, cantidad)
+
+1.  Pi[nombre](Sigma[pob='Burgos'](Clientes))
+
+*** Clientes que se llaman Vicente o Ángel. ***
+
+    Sigma[nombre='Vicente' OR nombre='Ángel'](Clientes)
+    Sigma[nombre='Vicente'] U Sigma[nombre='Ángel'](Clientes)
+
+2.  Pi[desc](Sigma[cod='desc'](Productos))
+
+3.  Pi[nombre](Sigma[cod = cliente](Clientes X Ventas)) U Pi[tel](Sigma[cod = cliente](Clientes X Ventas))
+    Pi[nombre, tel](Sigma[cod = cliente](Clientes X Ventas))
+
+*** Descripción y precio de productos que han sido vendidos al menos una vez. ***
+
+    Pi[desc, precio](Sigma[cod = prod](Productos X Ventas))
+
+*** Nombre de los clientes y descripción de los productos que han comprado esos cliente cuya cantidad sea mínimo 5. ***
+
+    Pi[nombre, desc](Sigma[cod = prod AND cantidad >= '5'](Clientes X Productos X Ventas))
+
+4.  

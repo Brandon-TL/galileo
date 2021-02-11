@@ -37,12 +37,24 @@ main {
     position: relative;
 }
 
+li {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+nav {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a {
     text-decoration: none;
     color: var(--text-color);
 } 
 
-.hada {
+.emoji {
     width: 50px;
     float: left;
     margin-right: 1rem;
@@ -84,7 +96,7 @@ nav {
     background: black;
     color: var(--text-color);
     border-radius: 10px;
-    left: 1rem;
+    left: 0.5rem;
     top: 1.5rem;
 }
 
@@ -121,8 +133,6 @@ nav > .menu {
     margin-top: -15rem;
     transition: margin-top 0.5s ease;
     display: none;
-    z-index: -1;
-    /* min-width: 100%;*/
 }
 
 .menu > .menu-item:hover > .submenu {
@@ -140,7 +150,3 @@ nav > .menu {
     width: 100%;
 }
 
-.menu-item:hover > a{
-    background-color: var(--text-color);
-    color: black;
-}
