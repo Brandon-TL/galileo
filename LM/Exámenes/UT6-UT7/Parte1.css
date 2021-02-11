@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+
+.topbot {
+    height: 24.8rem;
+    width: 100rem;
+}
+
+.cuadro {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+.cuadro:hover {
+    background-color: purple;
+}
+
+.tizq {
+    background-color: tomato;
+}
+
+.tdech {
+    background-color: lightblue;
+}
+
+.bizq {
+    background-color: lightgreen;
+}
+
+.bdech {
+    background-color: gray;
+}
+

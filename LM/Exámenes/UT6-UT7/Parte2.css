@@ -1,0 +1,42 @@
+body {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+h1 {
+    display: inline-block;
+    margin-right: 60%;
+}
+
+.usuarios {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.menu {
+    display: none;
+}
+
+.usuarios > .menu:hover {
+    display: relative;
+    position: absolute;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: #c0392b;
+}
+
+.usuario {/*#3498db*/
+    background-color: #2980b9;
+    text-align: center;
+}
+
+td {
+    background-color: #3498db;
+    text-align: left;
+}
