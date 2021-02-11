@@ -3,13 +3,20 @@ body {
     color: #ecf0f1;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: #34495e;
+}
+
 h1 {
     display: inline-block;
-    margin-right: 60%;
 }
 
 .usuarios {
+    float: right;
     display: inline-block;
+    margin: 20px 20px;
     font-size: 20px;
 }
 
@@ -17,9 +24,11 @@ h1 {
     display: none;
 }
 
-.usuarios > .menu:hover {
-    display: relative;
+.usuarios:hover > .menu {
+    display: block;
     position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 table {
