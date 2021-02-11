@@ -52,9 +52,8 @@ a {
     color: var(--text-emphasis);
 }
 
-a:hover {
+.menu:hover>a {
     color: white;
-    border-bottom: 0.1px solid white;
 }
 
 .submenu {
@@ -69,8 +68,13 @@ nav li:hover>ul {
 }
 
 .submenu > li {
-    text-decoration: none;
+    list-style: none;
     margin: 5px 10px;
+}
+
+.submenu > li:hover>a {
+    color: white;
+    background-color: var(--secondary-color);
 }
 
 main {
@@ -81,6 +85,30 @@ main {
     color: var(--text-color);
 }
 
-span:hover {
+.texto_resaltado:hover {
     color: var(--text-bold);
+}
+
+.tooltip {
+    display: none;
+    height: 10rem;
+    text-align: center;
+    width: 20rem;
+    height: 12rem;
+}
+
+span:hover > .tooltip {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--text-emphasis);
+    display: block;
+    position: absolute;
+}
+
+div > img {
+    height: 2rem;
+    width: 2rem;
+    float: left;
+    color: white;
 }
