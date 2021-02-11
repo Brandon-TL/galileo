@@ -15,7 +15,6 @@ h1 {
 
 .usuarios {
     float: right;
-    display: inline-block;
     margin: 20px 20px;
     font-size: 20px;
 }
