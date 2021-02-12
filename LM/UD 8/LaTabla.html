@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LaTabla.css">
+    <title>La Tabla</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <div class="thead">
+                Show <input type="number" min="0" max="20" id="entries"> entries
+            </div>
+            <div class="thead">
+                <input type="checkbox">Check All
+            </div>
+            <div class="thead">
+                Search: <input type="text" name="Search" id="Search">
+            </div>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Friendly name</th>
+                <th>From Day</th>
+                <th>To Day</th>
+                <th>From Time</th>
+                <th>To Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <tr class="line white">
+                <td><input type="checkbox" name="select" id="select"></td>
+                <td>Friday Afternoon</td>
+                <td>Friday</td>
+                <td>Friday</td>
+                <td>12:00pm</td>
+                <td>5:00pm</td>
+                <td>Available</td>
+                <td>
+                    <button><img src="Eye.png" alt="Show"></button>
+                    <button><img src="Clipboard.png" alt="Copy"></button>
+                    <button><img src="Delete.png" alt="Delete"></button>
+                </td>
+            </tr>
+            <tr class="line gray">
+                <td><input type="checkbox" name="select" id="select"></td>
+                <td>Friday Afternoon</td>
+                <td>Friday</td>
+                <td>Friday</td>
+                <td>12:00pm</td>
+                <td>5:00pm</td>
+                <td>Available</td>
+                <td>
+                    <button><img src="Eye.png" alt="Show"></button>
+                    <button><img src="Clipboard.png" alt="Copy"></button>
+                    <button><img src="Delete.png" alt="Delete"></button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <div class="tfoot">
+                Showing 1 to 10 of 20 entries
+            </div>
+            <div class="tfoot">
+                <button>First</button>
+                <button>Previous</button>
+                <button>1</button>
+                <button>2</button>
+                <button>Next</button>
+                <button>Last</button>
+            </div>
+        </tfoot>
+    </table>
+</body>
+</html>
