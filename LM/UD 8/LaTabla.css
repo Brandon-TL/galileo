@@ -1,32 +1,41 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
+table {
+    border-collapse: collapse;
+    border: 1.5px solid black;
+    width: 50%;
 }
 
-table{
-    border: solid #C2DCF2;
+tbody {
+    border-collapse: collapse;
+    border: 1.5px solid #c5c5c5;
     text-align: center;
 }
 
-thead {
-    justify-content: space-between;
-}
-
-.thead {
-    display: inline-block;
-}
-
-.tfoot {
-    display: inline-block;
-}
-
 td {
-    outline: 0.5px solid #C2DCF2;
+    outline: 0.5px solid #c5c5c5;
 }
 
-th {
-    color: white;
-    outline: 0.5px solid #C2DCF2;
-    background-color: #4CA0EA;
+td, th {
+    padding: 5px;
+}
+
+tbody > tr > td:first-of-type {
+    width: 2%;
+}
+
+tbody > tr > td:nth-child(2) {
+    width: 10%;
+}
+
+tbody > tr > td:nth-child(3), tbody > tr > td:nth-child(5) {
+    width: 8%;
+}
+
+tbody > tr > td:nth-child(4), tbody > tr > td:nth-child(6), tbody > tr > td:nth-child(7) {
+    width: 5%;
+}
+
+tbody > tr > td:nth-child(8) {
+    width: 10%;
 }
 
 .line:hover {
@@ -41,18 +50,13 @@ th {
     background-color: #EEEEEE;
 }
 
-button {
-    /* height: 5ch;
-    width: 5ch; */
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
-}
-
 td > button {
+    border-color: white;
     border-radius: 5px;
+    display: inline-block;
 }
 
 button > img {
-    height: 2.25    ch;
+    height: 2.25ch;
     width: 2.5ch;
 }
