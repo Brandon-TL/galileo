@@ -19,15 +19,28 @@ Ventas(prod, cliente, cantidad)
 
 2.  Pi[desc](Sigma[cod='desc'](Productos))
 
-3.  Pi[nombre](Sigma[cod = cliente](Clientes X Ventas)) U Pi[tel](Sigma[cod = cliente](Clientes X Ventas))
-    Pi[nombre, tel](Sigma[cod = cliente](Clientes X Ventas))
+3.  Pi[nombre, tel](Sigma[cod = cliente](Clientes X Ventas))
 
 *** Descripción y precio de productos que han sido vendidos al menos una vez. ***
 
     Pi[desc, precio](Sigma[cod = prod](Productos X Ventas))
 
-*** Nombre de los clientes y descripción de los productos que han comprado esos cliente cuya cantidad sea mínimo 5. ***
+*** Nombre de los clientes y descripción de los productos que han comprado esos clientes cuya cantidad sea mínimo 5. ***
 
-    Pi[nombre, desc](Sigma[cod = prod AND cantidad >= '5'](Clientes X Productos X Ventas))
+    Pi[nombre, desc](Sigma[Productos.cod = prod AND cantidad >= '5'](Clientes X Productos X Ventas))
 
-4.  
+*** Productos que se han vendido en Salamanca o cuya descripción sea 'Bolígrafo'. ***
+
+    S2 <--- Sigma[desc = 'Bolígrafo'](Productos)
+    S1 <--- Pi[Productos.cod, desc, precio](Sigma[pob = 'Salamanca' AND Clientes.cod = cliente AND Productos.cod = prod](Productos X Clientes X Ventas))
+    S1 U S2
+    
+    ?Esta mal¿ Sigma[desc = 'Bolígrafo'](Productos) U Pi[Productos.cod, desc, precio](Sigma[pob = 'Salamanca' AND Clientes.cod = cliente](Productos X Clientes X Ventas))
+
+4.  Pi[nombre, tel](Sigma[cod <> cliente](Clientes X Ventas))
+
+5.  Pi[cliente.cod, producto.cod, cantidad](Sigma[cantidad > 100](Clientes X Productos X Ventas))
+
+6.  Pi[cod](Sigma[precio > precio.Sigma[desc = 'Borrador'](Productos)](Productos)
+
+7.  
