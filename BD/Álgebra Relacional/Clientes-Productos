@@ -34,12 +34,10 @@ Ventas(prod, cliente, cantidad)
     S2 <--- Sigma[desc = 'Bolígrafo'](Productos)
     S1 <--- Pi[Productos.cod, desc, precio](Sigma[pob = 'Salamanca' AND Clientes.cod = cliente AND Productos.cod = prod](Productos X Clientes X Ventas))
     S1 U S2
-    
-    ?Esta mal¿ Sigma[desc = 'Bolígrafo'](Productos) U Pi[Productos.cod, desc, precio](Sigma[pob = 'Salamanca' AND Clientes.cod = cliente](Productos X Clientes X Ventas))
 
 4.  Pi[nombre, tel](Sigma[cod <> cliente](Clientes X Ventas))
 
-5.  Pi[cliente.cod, producto.cod, cantidad](Sigma[cantidad > 100](Clientes X Productos X Ventas))
+5.  Pi[cliente, prod, cantidad](Sigma[cantidad > 100](Clientes X Ventas))
 
 6.  Pi[cod](Sigma[precio > precio.Sigma[desc = 'Borrador'](Productos)](Productos)
 
