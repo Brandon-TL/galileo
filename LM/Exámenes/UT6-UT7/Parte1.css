@@ -3,8 +3,8 @@
 }
 
 .topbot {
-    height: 24.8rem;
-    width: 100rem;
+    height: 50vh;
+    width: 100vw;
 }
 
 .cuadro {
@@ -19,6 +19,7 @@
 
 .tizq {
     background-color: tomato;
+    border-color: 10px solid black;
 }
 
 .tdech {
