@@ -58,7 +58,7 @@ Ventas(prod, cliente, cantidad)
 1.  Productos que se han comprado tanto en Palencia como en León.
 2.  Productos que se han comprado en la ciudad en la que Juan compró 5 bolsas de pipas.
 
-    Sigma[pob='R'](Clientes X Ventas)
+    Sigma[pob='R'](Clientes X Ventas) /* faltan cosas */
     R <--- Pi[c.pob](J)
     J <--- [cliente = c.cod AND producto = p.cod AND c.nombre='Juan' AND p.desc='Bolsas de pipas' AND v.cant='5'](Ventas X Clientes X Productos)
 
