@@ -1,25 +1,19 @@
-1.  Nombre de los clientes de Burgos
-2.  Descripción de los productos cuyo código coincida con su descripción.
-3.  Nombre y teléfono de los clientes que han comprado algo.
-4.  Nombre y teléfono de los clientes que no han comprado nada.
-5.  Nombre del cliente, código de producto y cantidad de todos los productos para los que se han vendido más de 100 unidades en una sola venta.
-6.  Código de los productos que tienen un precio superior al del producto con descripción ‘Borrador’.
-7.  Productos que no se han comprado nunca en León.
-
-Clientes(cod, nombre, dirección, tel, pob)
-Productos(cod, desc, precio)
-Ventas(prod, cliente, cantidad)
-
-1.  Pi[nombre](Sigma[pob='Burgos'](Clientes))
+1.  Nombre de los clientes de Burgos.
+    
+    Pi[nombre](Sigma[pob='Burgos'](Clientes))
 
 *** Clientes que se llaman Vicente o Ángel. ***
 
     Sigma[nombre='Vicente' OR nombre='Ángel'](Clientes)
     Sigma[nombre='Vicente'] U Sigma[nombre='Ángel'](Clientes)
 
-2.  Pi[desc](Sigma[cod='desc'](Productos))
+2.  Descripción de los productos cuyo código coincida con su descripción.
 
-3.  Pi[nombre, tel](Sigma[cod = cliente](Clientes X Ventas))
+    Pi[desc](Sigma[cod='desc'](Productos))
+
+3.  Nombre y teléfono de los clientes que han comprado algo.
+
+    Pi[nombre, tel](Sigma[cod = cliente](Clientes X Ventas))
 
 *** Descripción y precio de productos que han sido vendidos al menos una vez. ***
 
@@ -35,10 +29,47 @@ Ventas(prod, cliente, cantidad)
     S1 <--- Pi[Productos.cod, desc, precio](Sigma[pob = 'Salamanca' AND Clientes.cod = cliente AND Productos.cod = prod](Productos X Clientes X Ventas))
     S1 U S2
 
-4.  Pi[nombre, tel](Sigma[cod <> cliente](Clientes X Ventas))
+4.  Nombre y teléfono de los clientes que no han comprado nada.
 
-5.  Pi[cliente, prod, cantidad](Sigma[cantidad > 100](Clientes X Ventas))
+    Pi[nombre, tel](Sigma[cod <> cliente](Clientes X Ventas))
 
-6.  Pi[cod](Sigma[precio > precio.Sigma[desc = 'Borrador'](Productos)](Productos)
+5.  Nombre del cliente, código de producto y cantidad de todos los productos para los que se han vendido más de 100 unidades en una sola venta.
 
-7.  
+    Pi[cliente, prod, cantidad](Sigma[cantidad > 100](Clientes X Ventas))
+
+6.  Código de los productos que tienen un precio superior al del producto con descripción ‘Borrador’.
+
+    Pi[cod](Sigma[precio > precio.Sigma[desc = 'Borrador'](Productos)](Productos)
+
+7.  Productos que no se han comprado nunca en León.
+
+    Pi[prod](Sigma[pob = 'León' AND Clientes.cod <> cliente](Clientes X Ventas))
+
+    Pi[cod](Productos) - Pi[Productos.cod](L)
+    L <--- Sigma[pob='León'](J)
+    J <--- Sigma[cod = cliente](Ventas X Clientes)
+
+Clientes(cod, nombre, dirección, tel, pob)
+Productos(cod, desc, precio)
+Ventas(prod, cliente, cantidad)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+1.  Productos que se han comprado tanto en Palencia como en León.
+2.  Productos que se han comprado en la ciudad en la que Juan compró 5 bolsas de pipas.
+
+    Sigma[pob='R'](Clientes X Ventas)
+    R <--- Pi[c.pob](J)
+    J <--- [cliente = c.cod AND producto = p.cod AND c.nombre='Juan' AND p.desc='Bolsas de pipas' AND v.cant='5'](Ventas X Clientes X Productos)
+
+3.  Productos que se han comprado en la ciudad en la que Juan compró 5 bolígrafos o en la ciudad en la que Ana compró 10 borradores.
+
+Determina a qué consulta responden las siguientes expresiones:
+
+1.  Pi[nombre, tel](Clientes)
+2.  Sigma[pob=’León’](Clientes)
+3.  Pi[nombre, tel](Sigma[pob=’León’](Clientes))
+4.  Pi[nombre, tel](Sigma[pob=’León’](Clientes)) U Pi[nombre, tel](Sigma[nombre=’Leo’](Clientes))
+5.  Pi[nombre](Sigma[pob=’Viana’](Clientes)) U Pi[nombre, tel](Sigma[nombre=’Leo’](Clientes))
+6.  Sigma[v.prod=c.cod](Ventas X Productos)
+7.  Pi[nombre, desc](Sigma[v.prod=c.cod AND v.cliente=c.cod](Clientes X Productos X Ventas))
