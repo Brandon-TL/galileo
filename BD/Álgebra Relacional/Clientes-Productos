@@ -1,5 +1,5 @@
 1.  Nombre de los clientes de Burgos.
-    
+
     Pi[nombre](Sigma[pob='Burgos'](Clientes))
 
 *** Clientes que se llaman Vicente o Ángel. ***
@@ -53,23 +53,56 @@ Clientes(cod, nombre, dirección, tel, pob)
 Productos(cod, desc, precio)
 Ventas(prod, cliente, cantidad)
 
------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1.  Productos que se han comprado tanto en Palencia como en León.
+
+    Pi[prod](Sigma[pob='Palencia' AND pob='León' AND cod = cliente](Clientes X Ventas))
+
 2.  Productos que se han comprado en la ciudad en la que Juan compró 5 bolsas de pipas.
 
-    Sigma[pob='R'](Clientes X Ventas) /* faltan cosas */
+    Pi[prod](Sigma[pob='R'](Clientes X Ventas))
     R <--- Pi[c.pob](J)
-    J <--- [cliente = c.cod AND producto = p.cod AND c.nombre='Juan' AND p.desc='Bolsas de pipas' AND v.cant='5'](Ventas X Clientes X Productos)
+    J <--- Sigma[cliente = Clientes.cod AND prod = Productos.cod AND nombre='Juan' AND desc='Bolsas de pipas' AND cantidad='5'](Ventas X Clientes)
 
 3.  Productos que se han comprado en la ciudad en la que Juan compró 5 bolígrafos o en la ciudad en la que Ana compró 10 borradores.
+
+    Pi[prod](Sigma[pob='R'](Clientes X Ventas))
+    R <--- Pi[c.pob](J)
+    J <--- Sigma[cliente = Clientes.cod AND prod = Productos.cod AND nombre='Juan' AND desc='Bolígrafo' AND cantidad='5'](Ventas X Clientes)
+    A <--- Sigma[cliente = Clientes.cod AND prod = Productos.cod AND nombre='Ana' AND desc='Borrador' AND cantidad='10'](Ventas X Clientes)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Determina a qué consulta responden las siguientes expresiones:
 
 1.  Pi[nombre, tel](Clientes)
+
+    Nombre y telefono de los clientes.
+
 2.  Sigma[pob=’León’](Clientes)
+
+    Clientes que viven en  León.
+
 3.  Pi[nombre, tel](Sigma[pob=’León’](Clientes))
+
+    Nombre y telefono de los clientes que viven en León.
+
 4.  Pi[nombre, tel](Sigma[pob=’León’](Clientes)) U Pi[nombre, tel](Sigma[nombre=’Leo’](Clientes))
+
+    Nombre y telefono de los clientes que viven en León y se llaman Leo.
+
 5.  Pi[nombre](Sigma[pob=’Viana’](Clientes)) U Pi[nombre, tel](Sigma[nombre=’Leo’](Clientes))
+
+    Nombre  de los clientes que viven en Viana y nombre y telefono de los clientes que se llaman Leo.
+
 6.  Sigma[v.prod=c.cod](Ventas X Productos)
+
+    Clientes cuyo código es igual al de algun producto.
+    /*No hay consulta posible ya que no disponemos del código de los clientes.*/
+    /*No hay consulta posible para esta expresión, ya que el codigo de producto de venta nunca será igual a el código de un cliente.*/
+
 7.  Pi[nombre, desc](Sigma[v.prod=c.cod AND v.cliente=c.cod](Clientes X Productos X Ventas))
+
+    Nombre de clientes cuyo código es igual al producto que han comprado y descripción de esos productos.
+    /*No hay consulta posible para esta expresión.*/
