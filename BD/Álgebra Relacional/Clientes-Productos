@@ -67,7 +67,9 @@ Ventas(prod, cliente, cantidad)
 
 3.  Productos que se han comprado en la ciudad en la que Juan compró 5 bolígrafos o en la ciudad en la que Ana compró 10 borradores.
 
-    Pi[prod](Sigma[pob='R'](Clientes X Ventas))
+    F <--- S U T
+    S <--- Pi[prod](Sigma[pob='R'](Clientes X Ventas))
+    T <--- Pi[prod]()
     R <--- Pi[c.pob](J)
     J <--- Sigma[cliente = Clientes.cod AND prod = Productos.cod AND nombre='Juan' AND desc='Bolígrafo' AND cantidad='5'](Ventas X Clientes)
     A <--- Sigma[cliente = Clientes.cod AND prod = Productos.cod AND nombre='Ana' AND desc='Borrador' AND cantidad='10'](Ventas X Clientes)
