@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    font-size: small;
 }
 
 table {
@@ -9,11 +10,19 @@ table {
     margin-right: auto;
     margin-top: 5%;
     text-align: center;
+    outline: 1px solid #56B6EA;
+    border-radius: 10px;
+}
+
+thead > tr, tfoot > tr {
+    text-align: left;
+    padding-left: 2%;
+    height: 50px;
 }
 
 table, th, td {
     border-collapse: collapse;
-    border: 1.5px solid black;
+    border: 1.5px solid rgb(194, 194, 194);
 }
 
 th, td {
@@ -21,10 +30,29 @@ th, td {
 }
 
 th {
-    background-color: #56B6EA;
-    box-shadow: inset 0px -10px 10px 0px #3d7fe8;
+    /* background-color: #56B6EA;
+    box-shadow: inset 0px -10px 10px 0px #3d7fe8; */
+    background: linear-gradient(#56B6EA, #3d7fe8);
     color: #fff;
     font-size: larger;
+}
+
+.CA {
+    display: inline-block;
+    margin-left: 49%;
+    background-color: rgb(230, 230, 230);
+    height: 60%;
+    width: 8.5%;
+    border-radius: 5%;
+}
+
+.S {
+    margin-left: 1%;
+}
+
+.Showing {
+    margin-left: 1%;
+    border-radius: 10px;
 }
 
 .gray {
@@ -32,5 +60,33 @@ th {
 }
 
 .line:hover {
-    background-color: rgb(162, 219, 255);
+    background-color: rgb(176, 225, 255);
+}
+
+tbody > tr > td > button {
+    border-radius: 5px;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+button > img{
+    width: 15px;
+    height: 15px;
+}
+
+.nav {
+    display: inline-block;
+    margin-left: 20%;
+}
+
+.nav > button {
+    height: 35px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(176, 225, 255);
+    border: 1px rgb(194, 194, 194);
+}
+
+.nav > button:hover {
+    background-color: #fff;
 }
