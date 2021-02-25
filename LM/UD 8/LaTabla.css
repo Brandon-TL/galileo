@@ -5,7 +5,7 @@ body {
 }
 
 table {
-    width: 60%;
+    width: 80em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
@@ -17,7 +17,7 @@ table {
 thead > tr, tfoot > tr {
     text-align: left;
     padding-left: 2%;
-    height: 50px;
+    height: 40px;
 }
 
 table, th, td {
@@ -39,7 +39,7 @@ th {
 
 .CA {
     display: inline-block;
-    margin-left: 49%;
+    margin-left: 52.5%;
     background-color: rgb(230, 230, 230);
     height: 60%;
     width: 8.5%;
@@ -76,7 +76,8 @@ button > img{
 
 .nav {
     display: inline-block;
-    margin-left: 20%;
+    width: 40%;
+    margin-left: 42%;
 }
 
 .nav > button {
@@ -84,7 +85,7 @@ button > img{
     padding-left: 5%;
     padding-right: 5%;
     background-color: rgb(176, 225, 255);
-    border: 1px rgb(194, 194, 194);
+    border: 0.25px solid rgb(194, 194, 194);
 }
 
 .nav > button:hover {
