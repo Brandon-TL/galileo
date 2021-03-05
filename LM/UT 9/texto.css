@@ -1,0 +1,43 @@
+.text {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    color: greenyellow;
+    background-color: black;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 2em;
+    letter-spacing: 0.2rem; /*Valores negativos para juntar las letras*/
+    font-family: Roboto;
+
+}
+
+.fluffy {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: #3F93D2;
+    text-align: center;
+    padding: 1em 2em;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.button:hover {
+    background-color: #3376aa;
+}
