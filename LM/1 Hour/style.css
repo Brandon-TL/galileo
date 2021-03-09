@@ -1,6 +1,6 @@
 @font-face {
     font-family: roboto;
-    src url(roboto.ttf);    
+    /* src url(roboto.ttf);     */
 }
 
 body {
@@ -95,7 +95,7 @@ header {
 
 .kolom .atas img {
     width: 50%;
-    border-radius: 100px;
+    border-radius: 50%j;
 }
 
 .kolom .tengah {
