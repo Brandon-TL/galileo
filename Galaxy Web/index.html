@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GALAX WEB</title>
-  <link rel="shortcut icon" href="img/favicon.jpg" type="image/jpg">
- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Iniciar Sesion</title>
 </head>
 <body>
-  
-  <div class="login">
-    <!-- Diferencia a toda la pagina separandola del mensaje ERROR FALLO INICIO DE SESION -->
-    <div class="nombre-juego">
-      <h1>Galax Web</h1>
-    </div>
-    <div class="login-header">
-      <!-- corresponde a la cabecera principal -->
-      <h2>Login</h2>
-    </div>
-    <div class="login-form">
-     
+  <h1>Galaxy Web</h1>
+
+  <div class="Container">
+    <form method="GET" action="#">
       <div class="form_usuario">
-          <label for="usuario">Usuario:</label>
-          <input id="usuario" type="text"/>
+        <input placeholder="Usuario" id="usuario" type="text"/>
       </div>
       <div class="form_password">
-          <label for="password">Contraseña:</label>
-          <input id="password" type="password"/>
+        <input placeholder="Contraseña" id="password" type="password"/>
       </div>
-     
-      <input type="button" value="Login" class="login-button"/>
-      <input class="sign-up" type="button" value="Registrate" class="login-button"/>
-      
-      <a class="no-access" href="#">No puedes acceder a tu cuenta?</a>
-    </div>
+      <a href="#">¿Has olvidado tu contraseña?</a>
+      <input class="button" type="button" value="Iniciar sesión">
+      <input class="button" type="button" value="Registrarse">
+    </form>
   </div>
-  <div class="error-page">
-    <div class="try-again">Error, intentalo de nuevo?</div>
-  </div>
-  
+
+  <img class="lulo" src="img/alien.gif" alt="">
 </body>
 </html>
