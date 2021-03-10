@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-bottom: 0.5rem;
+      }
+
+      .etiqueta {
+        display: inline-block;
+        width: 20ch;
+        text-align: right;
+      }
+
+      .numeros {
+        width: 5ch;
+      }
+
+      .top {
+        vertical-align: top;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .increible {
+        color: tomato;
+      }
+
+    </style>
+    <script>
+       function actualizar() {
+         personas = ["Jacinto", "Jose", "Ana", "Claudia", "Pepi", "Anabel"];
+
+        
+         radio = document.getElementById("radio").value;
+         longitud = (2 * Math.PI * radio).toFixed(2);
+         a = (Math.PI * radio * radio).toFixed(2);
+         document.getElementById("longitud").value = longitud + 'm';
+         document.getElementById("are").value = a + 'm';
+         if(radio==3) {
+          document.getElementById("labomba").innerHTML='<div class="increible">lo flipas</div>';
+         } else {
+          document.getElementById("labomba").innerHTML='';
+         }
+
+         //esto no tiene nada que ver con la actualización del ejercicio de radios
+         salida = "<table><tr><th>Nombre</th></tr>";
+         for (i=0; i<personas.length; i++) {
+           salida += "<tr><td>"+personas[i]+"</td></tr>";
+         }
+         salida += "</table>";
+         alert(salida);
+         document.getElementById("usuarios").innerHTML=salida;
+       }
+    </script>
+  </head>
+  <body>
+    <form id="radios">
+      <label>Introduczca el radio: </label>
+      <input type="number" id="radio" step="any" onchange="actualizar();">
+      <fieldset>
+        <legend>Resultados</legend>
+        <div>
+          <label for="area">Área del círculo</label>
+          <output id="are">Aquí saldrá el resultado del área</output>
+        </div>
+        <div>
+          <label for="longitud">Longitud de la circunferencia</label>
+          <output id="longitud">Aquí saldrá el resultado de la longitud</output>
+        </div>
+        <div id="labomba"></div>
+      </fieldset>
+    </form>
+    <div id="usuarios">Esto se va a borrar...</div>
+    <form action="processform.php" method="POST">
+      <fieldset>
+        <legend>Datos de inicio</legend>
+        <div>
+          <!-- <label class="etiqueta" for="usuario">Nombre de usuario</label> -->
+          <input placeholder="Nombre de usuario" id="usuario" type="text" name="usuario_name" />
+        </div>
+        <div>
+          <label class="etiqueta" for="pass">Contraseña</label>
+          <input id="pass" type="password" name="pass_name" />
+        </div>
+        <div>
+          <label>
+            <span>Email</span><input id="email" type="email" name="mi_email" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <span>Elija un color</span
+            ><input id="colorPicked" type="color" name="colorPicker" />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        Fecha de nacimiento
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento" /> Hora
+        de nacimiento
+        <input type="time" name="horaNacimiento" id="horaNacimiento" /> Número
+        de hijos <input value="8" type="number" min="4" max="99" class="numeros" name="numHijos" id="numHijos"/>
+        <div>
+          <input type="checkbox" name="res" id="res" />
+          <label for="res">Residente en Valladolid</label>
+          <input type="checkbox" name="nac" id="nac" />
+          <label for="nac">Nacionalidad española</label>
+        </div>
+      </fieldset>
+      <input type="range" min="9" max="21" step="3" id="rango">
+      <fieldset>
+        <div>
+          <input type="radio" name="gen" id="gen-hombre" />
+          <label for="gen-hombre">Hombre</label>
+        </div>
+        <div>
+          <input type="radio" name="gen" id="gen-mujer" />
+          <label for="gen-mujer">Mujer</label>
+        </div>
+        <div>
+          <input type="radio" name="gen" id="gen-na" />
+          <label for="gen-na">N/A</label>
+        </div>
+        <legend>Identidad sexual</legend>
+      </fieldset>
+      <fieldset>
+        <legend>Estado civil</legend>
+        <div>
+          <input type="radio" name="es" id="es-sol" />
+          <label for="es-sol">Soltero</label>
+        </div>
+        <div>
+          <input type="radio" name="es" id="es-cas" />
+          <label for="es-cas">Casado</label>
+        </div>
+        <div>
+          <input type="radio" name="es" id="es-vi" />
+          <label for="es-vi">Viudo</label>
+        </div>
+        <div>
+          <input type="radio" name="es" id="es-na" />
+          <label for="es-na">N/A</label>
+        </div>
+        <label for="dropdown">Elige una opción</label>
+        <select required name="dropdown" id="dropdown">
+          <option selected value="no-opt"></option>
+          <optgroup label="grupo 1">
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+            <option>Opción 3</option>
+            <option>Opción 4</option>
+            <option>Opción 5</option>
+            <option>Opción 6</option>
+            <option>Opción 7</option>
+          </optgroup>
+          <optgroup label="grupo 2">
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+            <option>Opción 3</option>
+            <option>Opción 4</option>
+            <option>Opción 5</option>
+            <option value="asnbdasjda">Opción 6 con value</option>
+            <option>Opción 7</option>
+          </optgroup>
+          <optgroup label="grupo 3">
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+            <option>Opción 3</option>
+            <option>Opción 4</option>
+            <option>Opción 5</option>
+            <option>Opción 6</option>
+            <option>Opción 7</option>
+          </optgroup>
+          <optgroup label="grupo 4">
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+            <option>Opción 3</option>
+            <option>Opción 4</option>
+            <option>Opción 5</option>
+            <option>Opción 6</option>
+            <option>Opción 7</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <input class="top" type="submit" value="Iniciar" />
+      <textarea placeholder="Escriba su mensaje" rows="10" cols="50"></textarea>
+      <fieldset>
+        <label for="provincias">Provincia</label>
+        <input type="text" list="listaProvincias" id="provincias">
+        <datalist id="listaProvincias">
+          <option>Valladolid</option>
+          <option>Valencia</option>
+          <option>Teruel</option>
+          <option>Toledo</option>
+          <option>Zaragoza</option>
+          <option>Zamora</option>
+          <option>Palencia</option>
+          <option>León</option>
+        </datalist>
+      </fieldset>
+    </form>
+  </body>
+</html>
