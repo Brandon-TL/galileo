@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de formularios y texto</title>
+    <link rel="stylesheet" href="style_base.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <h1>SCA - Inventario de productos</h1>
+  </header>
+  <nav>
+    <ul class="menu">
+        <li><a href="#"><span class="material-icons-outlined">shopping_cart</span> Solicitudes de compra</a></li>
+        <li><a class="selected" href="#"><span class="material-icons-outlined">inventory</span> Inventario</a></li>
+        <li><a href="#"><span class="material-icons-outlined">summarize</span> Informe de entradas</a></li>
+        <li><a href="#"><span class="material-icons-outlined">outbox</span> Informe de salidas</a></li>
+        <li><a href="#"><span class="material-icons-outlined">engineering</span> Mantenimiento</a></li>
+        <li><a href="#">Abrir ticket de soporte</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="filters">
+        <form>
+            <fieldset>
+                <legend><span class="material-icons-outlined">filter_alt</span></legend>
+                <div>
+                    <label class="spaceBet" for="id">Por ID:</label>
+                    <input type="text" placeholder="Introduce un ID...">
+                </div>
+                <div class="padTop">
+                    <label class="spaceBet" for="text">Por texto:</label>
+                    <select>
+                        <option value="Artículo">Artículo</option>
+                        <option value="Descripción">Descripción</option>
+                        <option value="Artículo y descripción" selected>Artículo y descripción</option>
+                    </select>
+                    <select>
+                        <option value="Coincide con">Coincide con</option>
+                        <option value="No coincide con">No coincide con</option>
+                        <option value="Contiene a">Contiene a</option>
+                        <option value="No contiene a">No contiene a</option>
+                    </select>
+                    <input type="text" placeholder="Introduce un texto...">
+                </div>
+                <div class="padTop">
+                    <label class="spaceBet" for="pvp">PVP entre:</label>
+                    <input type="text" placeholder="Lim.Inferior...">
+                    <input type="text" placeholder="Lim.Superior...">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Disponibilidad</legend>
+                <div><input type="radio" name="disponibilidad" id="todos"><label for="todos">Todos los productos</label></div>
+                <div class="padTop"><input type="radio" name="disponibilidad" id="stock" checked><label for="stock">Productos en Stock</label></div>
+                <div class="padTop"><input type="radio" name="disponibilidad" id="sinStock"><label for="sinStock">Productos sin Stock</label></div>
+            </fieldset>
+            <button>Aplicar</button>
+        </form>
+    </div>
+    <div class="results">
+      <table class="results-table">
+        <tr>
+          <th>ID</th>
+          <th>Artículo</th>
+          <th>Descripción</th>
+          <th>PVP</th>
+          <th>Stock</th>
+        </tr>
+        <tr>
+          <td>I997</td>
+          <td>Vendaje hidrófobo</td>
+          <td>Vendaje de 50x530cm en pack de 3</td>
+          <td>23€</td>
+          <td>15</td>
+        </tr>
+        <tr class="par">
+          <td>JB97</td>
+          <td>Agua oxigenada</td>
+          <td>Bote de agua oxigenada de 50cl</td>
+          <td>5€</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>IN78</td>
+          <td>Tijeras precisión</td>
+          <td>Tijeras con recubrimiento de titanio</td>
+          <td>51€</td>
+          <td>9</td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

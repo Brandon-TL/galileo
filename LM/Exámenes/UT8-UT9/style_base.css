@@ -1,0 +1,194 @@
+/* Definición de variables */
+:root {
+    --bg-color-header: #16a085;
+    --bg-color-header-shadow: #0b524377;
+    --bg-color-nav: #34495e;
+    --bg-color-main: #2c3e50;
+    --bg-color-accent: #e74c3c;
+    --bg-color-thead: #7f8c8d;
+    --bg-color-par: #34495e80;
+    --text-main: #FFF;
+    --link-color: #FFF;
+    --menu-width: 15rem;
+}
+
+/* Reseteo básico de estilos */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+}
+
+/* Cabecera principal de la página. Uso clases porque podría haber varios elementos <header> */
+.main-header {
+    height: 4rem;
+    background-color: var(--bg-color-header);
+    padding: 1em 1em;
+    box-shadow: -2px -2px 5px 1px var(--bg-color-header-shadow) inset;
+}
+
+/* No uso clases porque no debería haber más de un main ni más de un nav, aunque hay quien recomendaría usarlas aquí también */
+nav, main {
+    position: fixed;
+    top: 4rem;
+}
+
+nav {
+    height: calc(100vh - 4rem);
+    left: 0;
+    width: var(--menu-width); /* reservo ancho */
+    background-color: var(--bg-color-nav);
+    box-shadow: -2px -2px 5px 5px var(--bg-color-main) inset;
+}
+
+main {
+    left: var(--menu-width);
+    width: calc(100vw - var(--menu-width)); /* el resto del ancho */
+    min-width: 30rem; /* pero por lo menos que quepan 30 rems */
+    min-height: calc(100vh - 4rem); /* quiero que el main al menos ocupe todo el alto visible; puede que más... */
+    background-color: var(--bg-color-main);   
+}
+
+.menu {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.menu > li > a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: .5em 1em;
+    border-left: 4px transparent solid; /* reservamos el hueco aunque no se vea: así no varía el tamaño en el hover */
+    border-radius: 5px;
+}
+
+.menu a:hover{
+    border-left: 4px var(--bg-color-accent) solid;
+}
+
+.menu > li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 97%; /* evitamos que pise la sombra */
+    background-color: var(--bg-color-accent);
+    border-radius: 3px;
+}
+
+.menu > li:last-child > a {
+    text-align: center;
+    border-left: 0; /* tenía el borde del hover que descuadra el centrado */
+}
+
+.selected::after{ /* marcamos la opción de menú seleccionada */
+    content: "<";
+    position: absolute;
+    right: 1rem;
+}
+
+.results, .filters {
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.filters {
+    margin-top: 2rem; /* quiero separar un poco más la primera caja del main respecto del header */
+    padding: 1rem;
+    background-color: var(--bg-color-nav);
+    border-radius: 3px;
+}
+
+.results-table {
+    width: 100%;
+    border-spacing: 2px;
+}
+
+
+.results-table th {
+    padding: .5em 1em;
+    background-color:var(--bg-color-thead);
+    border-radius: 3px;
+    text-align: left;
+}
+
+.results-table td {
+    padding: .5em 1em;
+    background-color: var(--bg-color-nav);
+    border-radius: 1px;
+}
+
+.results-table .par > td {
+    background-color: var(--bg-color-par)
+}
+
+/*                 EXAMEN                        */
+
+fieldset {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+fieldset > input {
+    display: inline-block;
+}
+
+.padTop {
+    padding-top: 0.5em;
+}
+
+.spaceBet {
+    display: inline-block;
+    width: 8rem;
+}
+
+input[type="radio"] {
+    width: 2%;
+}
+
+input[type="text"] {
+    padding: 0.75em 1em;
+    width: 12%;
+}
+
+select, option {
+    padding: 0.75em 1em;
+    width: 15%;
+    color: black;
+}
+
+button {
+    padding: 1em 1.5em;
+    font-size: 1em;
+    background-color: var(--bg-color-header);
+    border: none;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    cursor: pointer;
+}
+
+.menu > li:last-child > a:hover {
+    font-weight: 700;
+}
+
+.menu > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .menu > li {
+    vertical-align: center;
+} No funciona :( */
