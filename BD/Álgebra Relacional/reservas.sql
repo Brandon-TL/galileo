@@ -104,3 +104,56 @@ GROUP BY id_polideportivo;
 
 SELECT * FROM pistas WHERE id_polideportivo = 5;
 SELECT * FROM pistas WHERE id_polideportivo = 24;
+
+SELECT nombre, ciudad, pos
+FROM participantes
+ORDER BY pos ASC;
+
+SELECT nombre, ciudad, pos
+FROM participantes
+ORDER BY ciudad, pos ASC;
+
+SELECT *
+FROM participantes
+WHERE pos BETWEEN 10 AND 15;
+
+SELECT *
+FROM participantes
+WHERE pos >= 10 and pos <= 15;
+
+SELECT ciudad, COUNT(nombre) AS 'Numero de participantes por ciudad'
+FROM participantes
+GROUP BY ciudad;
+
+SELECT sexo, COUNT(sexo) AS 'Numero por genero entre los 10 primeros'
+FROM participantes
+WHERE pos <= 10
+GROUP BY sexo;
+
+SELECT * FROM participantes ORDER BY pos ASC;
+
+SELECT nombre
+FROM participantes
+WHERE sexo = 'H' AND ciudad = 'Burgos'
+LIMIT 1;
+
+SELECT *
+FROM participantes
+WHERE sexo = 'H' AND ciudad = 'Palencia'
+LIMIT 2;
+
+UPDATE pistas SET precio = precio + precio*0.1
+WHERE tipo = 'tenis';
+
+SELECT * 
+FROM pistas
+WHERE tipo = 'tenis';
+
+UPDATE reservas SET precio = precio + precio*0.1
+WHERE tipo = 'tenis';
+
+SELECT YEAR(MAX(fecha_reserva)) AS 'Ultima reserva', 
+YEAR(MIN(fecha_reserva)) AS 'Primera reserva'
+FROM reservas;
+
+UPDATE reservas SET fecha_reserva = DATE_ADD(fecha_reserva, interval 5 YEAR);
